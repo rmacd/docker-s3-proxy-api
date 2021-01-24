@@ -34,7 +34,7 @@ const aws_s3 = new AWS.S3({apiVersion: '2006-03-01', signatureVersion: 'v4', reg
 
 function generateSignedLink(object_key) {
     return new Promise(((resolve, reject) => {
-        let params = Object.assign({Key: object_key, Expires: 20}, aws_s3Params);
+        let params = Object.assign({Key: object_key, Expires: 120}, aws_s3Params);
         console.log("GET ", params, "(signed link)");
         aws_s3.getSignedUrl(
             'getObject', params, ((err, url) => {
