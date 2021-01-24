@@ -1,0 +1,17 @@
+[Unit]
+Description=docker-s3p
+Requires=docker.service
+After=docker.service
+
+[Service]
+WorkingDirectory=/var/www/docker-s3p
+ExecStart=/bin/docker-compose -f compose.yml up
+ExecStop=/bin/docker-compose -f compose.yml down
+TimeoutStartSec=0
+Restart=on-failure
+StartLimitIntervalSec=60
+StartLimitBurst=3
+
+[Install]
+WantedBy=multi-user.target
+
