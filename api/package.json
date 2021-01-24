@@ -1,0 +1,25 @@
+{
+  "name": "aws-s3-proxy-api",
+  "version": "1.0.0",
+  "repository": "https://github.com/rmacd/aws-s3-proxy-api",
+  "description": "Proxy API for Docker-based AWS S3 interface",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ronald@rmacd.com",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "aws-sdk": "^2.705.0",
+    "body-parser": "^1.19.0",
+    "connect-multiparty": "^2.2.0",
+    "cookie-parser": "^1.4.5",
+    "crypto": "^1.0.1",
+    "csurf": "^1.11.0",
+    "express": "^4.17.1",
+    "express-http-proxy": "^1.6.0",
+    "node-cache": "^5.1.2",
+    "package.json": "^2.0.1",
+    "path": "^0.12.7"
+  }
+}
